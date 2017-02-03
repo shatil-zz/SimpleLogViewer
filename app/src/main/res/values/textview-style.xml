@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="extra_large_text_view_black">
+        <item name="android:textSize">@dimen/extra_large_title</item>
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+    <style name="large_text_view_black">
+        <item name="android:textSize">@dimen/large_title</item>
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+
+    <style name="medium_text_view_black">
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+    <style name="medium_text_view_gray">
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@color/text_color_gray</item>
+    </style>
+    <style name="text_view_error_viewer_black">
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+</resources>
