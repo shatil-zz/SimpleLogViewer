@@ -58,8 +58,8 @@ public class LogViewerActivity extends AppCompatActivity implements LogViewer.vi
         srRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                int random = new Random(1).nextInt(2);
-                LogViewerUtils.addNewLog(context, "Status code" + random, "Test description. Found code:" + random, random);
+                int random = new Random().nextInt(20);
+                LogViewerUtils.addNewLog(context, "Status code" + random, "description....." + random, random % 3);
                 presenter.loadData(null, null);
             }
         });

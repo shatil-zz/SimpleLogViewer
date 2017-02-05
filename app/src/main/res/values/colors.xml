@@ -14,4 +14,5 @@
     <color name="color_failed">#AA0000</color>
     <color name="color_successful">#00AA00</color>
     <color name="color_neutral">#0000AA</color>
+    <color name="color_warning">#AA0000</color>
 </resources>

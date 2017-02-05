@@ -2,6 +2,7 @@ package com.shieldpeoples.simplelogviewer.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.shieldpeoples.simplelogviewer.R;
 import com.shieldpeoples.simplelogviewer.model.log.LogViewerModel;
+import com.shieldpeoples.simplelogviewer.utils.format.DateTimeFormatUtils;
 
 import java.util.ArrayList;
 
@@ -75,12 +77,13 @@ public class LogViewerAdapter extends RecyclerView.Adapter<LogViewerAdapter.View
             holder.tvDescription.setText("No description found");
         }
         if (item.getSenderName() != null && item.getSenderName().length() > 0) {
-            holder.tvSenderInfo.setText("Added by " + item.getSenderName()+" at "+item.getTime());
+            holder.tvSenderInfo.setText(Html.fromHtml("Added by <b>" + item.getSenderName()+
+                    "</b> at "+ DateTimeFormatUtils.getHumanReadableDateTime(item.getTime())));
         } else {
-            holder.tvSenderInfo.setText("No name found");
+            holder.tvSenderInfo.setText(Html.fromHtml("<font color='#AA0000'>No name found</font>"));
         }
         holder.ivStatus.setBackgroundColor(item.getColorOfStatus());
-        holder.tvStatus.setText(item.getReadableStatus());
+        holder.tvStatus.setText(Html.fromHtml(item.getReadableStatus()));
     }
 
     public LogViewerModel getItem(int position) {

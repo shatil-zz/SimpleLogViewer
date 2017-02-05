@@ -1,4 +1,5 @@
 package com.shieldpeoples.simplelogviewer.model.log;
+
 import com.shieldpeoples.simplelogviewer.R;
 import com.shieldpeoples.simplelogviewer.utils.log.LogViewerUtils;
 
@@ -51,11 +52,11 @@ public class LogViewerModel {
     public String getReadableStatus() {
         switch (status) {
             case LogViewerUtils.STATUS_FAILURE_LOG:
-                return "failed";
+                return "<font color='#AA0000'>failed</font>";
             case LogViewerUtils.STATUS_SUCCESS_LOG:
-                return "success";
+                return "<font color='#00AA00'>success</font>";
             default:
-                return "debug";
+                return "<font color='#0000AA'>debug</font>";
         }
     }
 
